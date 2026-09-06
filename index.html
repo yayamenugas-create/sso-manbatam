@@ -1,0 +1,725 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6TH SUPERSTAR SCIENCE OLYMPIAD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        magic: {
+                            900: '#130525',
+                            800: '#230b42',
+                            700: '#3a136c',
+                            600: '#552199',
+                            400: '#915eed',
+                            gold: '#ffd700',
+                            glow: '#e0c3fc'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Cinzel', 'serif'],
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(145, 94, 237, 0.5)',
+                        'gold-glow': '0 0 15px rgba(255, 215, 0, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            background-color: #270a4e;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        
+        .bg-stars {
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+        }
+
+        .glass-panel {
+            background: rgba(35, 11, 66, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(145, 94, 237, 0.3);
+            border-radius: 1rem;
+        }
+
+        .glass-nav {
+            background: rgba(19, 5, 37, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(145, 94, 237, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #ffd700, #ffaa00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gradient-text-purple {
+            background: linear-gradient(to right, #e0c3fc, #915eed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #130525;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #552199;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #915eed;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-stars relative">
+
+    <!-- Glowing Orbs Background -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-magic-600 opacity-20 blur-[100px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-blue-600 opacity-20 blur-[120px]"></div>
+        <div class="absolute top-[40%] left-[60%] w-[30%] h-[30%] rounded-full bg-purple-500 opacity-10 blur-[80px]"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center shadow-glow overflow-hidden border border-magic-400">
+                        <img src="LOGO SSO.jpg" alt="Logo SSO" class="w-full h-full object-cover">
+                    </div>
+                    <span class="font-display font-bold text-lg md:text-xl tracking-wider text-white hidden sm:block">Superstar Science Olympiad</span>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#beranda" class="hover:text-magic-gold px-3 py-2 rounded-md text-sm font-medium transition-colors text-white">Beranda</a>
+                        <a href="#tentang" class="hover:text-magic-gold px-3 py-2 rounded-md text-sm font-medium transition-colors text-gray-300">Tentang</a>
+                        <a href="#bidang" class="hover:text-magic-gold px-3 py-2 rounded-md text-sm font-medium transition-colors text-gray-300">Bidang</a>
+                        <a href="#timeline" class="hover:text-magic-gold px-3 py-2 rounded-md text-sm font-medium transition-colors text-gray-300">Timeline</a>
+                        <a href="#biaya" class="hover:text-magic-gold px-3 py-2 rounded-md text-sm font-medium transition-colors text-gray-300">Pendaftaran</a>
+                        <a href="#galeri" class="hover:text-magic-gold px-3 py-2 rounded-md text-sm font-medium transition-colors text-gray-300">Galeri</a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#" class="inline-flex items-center justify-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-full text-magic-900 bg-magic-gold hover:bg-yellow-400 shadow-gold-glow transition-all duration-300">
+                        Daftar Sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <a href="https://simt.kemendikdasmen.go.id" target="_blank" class="inline-flex items-center gap-2 px-5 py-2 rounded-full glass-panel border-magic-400/50 mb-8 animate-fade-in-up text-sm text-magic-glow hover:bg-magic-800 transition-colors cursor-pointer">
+                <i class="fas fa-check-circle text-green-400"></i>
+                Telah terkurasi Puspresnas. Cek simt.kemendikdasmen.go.id
+            </a>
+            
+            <h1 class="font-display text-5xl md:text-7xl font-bold tracking-tight mb-6">
+                <span class="block text-white mb-2">6TH SUPERSTAR</span>
+                <span class="block gradient-text">SCIENCE OLYMPIAD</span>
+            </h1>
+            
+            <p class="mt-4 text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto font-display italic font-light mb-10">
+                "Beyond the spells, Beyond the stars, Become a Superstar"
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#" class="px-8 py-4 w-full sm:w-auto rounded-full bg-magic-gold text-magic-900 font-bold text-lg hover:scale-105 transition-transform shadow-gold-glow">
+                    <i class="fas fa-rocket mr-2"></i> Daftar Sekarang
+                </a>
+                <a href="#tentang" class="px-8 py-4 w-full sm:w-auto rounded-full glass-panel text-white font-semibold text-lg hover:bg-magic-800 transition-colors border border-magic-400">
+                    Pelajari Lebih Lanjut
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logo / Organized By -->
+    <section class="py-10 border-y border-magic-800 bg-magic-900/50">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
+            <p class="text-sm text-gray-400 uppercase tracking-widest mb-6">Diselenggarakan Oleh</p>
+            <div class="flex items-center gap-8 md:gap-16 opacity-80 hover:opacity-100 transition-opacity">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-school text-3xl text-magic-400"></i>
+                    <span class="font-bold text-xl">MAN 1 BATAM</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-users-cog text-3xl text-magic-400"></i>
+                    <span class="font-bold text-xl">TIM OLIMPIADE MAN BATAM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latar Belakang & Tentang -->
+    <section id="tentang" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Text Content -->
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-display font-bold gradient-text mb-4">Latar Belakang</h2>
+                        <div class="w-20 h-1 bg-magic-400 rounded"></div>
+                    </div>
+                    
+                    <div class="text-gray-300 space-y-4 text-justify glass-panel p-6">
+                        <p>
+                            Ilmu pengetahuan dan teknologi yang semakin berkembang merupakan salah satu akibat dari lajunya arus globalisasi. Globalisasi membawa banyak perubahan signifikan yang menghadirkan tantangan baru, menuntut kita memastikan bahwa perkembangan IPTEK berlangsung secara positif dan berkelanjutan.
+                        </p>
+                        <p>
+                            Superstar Science Olympiad lahir dari tim olimpiade MAN Batam dengan tujuan menyelenggarakan olimpiade sains berkualitas, sehingga seluruh siswa/i di Indonesia memiliki kesempatan dan merasakan pengalaman berkompetisi serta meraih prestasi.
+                        </p>
+                        <p>
+                            Tahun ini, kami kembali mengadakan <strong>"Superstar Science Olympiad"</strong> jenjang SMP/MTs dan SMA/SMK/MA tingkat nasional secara online sebagai wadah untuk saintis di seluruh Indonesia mengembangkan bakat dan kemampuan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Visi Misi Accordion / Cards -->
+                <div class="space-y-6">
+                    <div class="glass-panel p-8 relative overflow-hidden group hover:border-magic-400 transition-colors">
+                        <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
+                            <i class="fas fa-eye text-6xl text-magic-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-4">Visi</h3>
+                        <p class="text-gray-300 relative z-10 italic">
+                            “Menjadi wahana prestasi dan pengembangan diri bagi peserta didik yang dapat memberikan pemahaman mendalam, kolaborasi ilmiah, dan semangat kompetisi yang sehat.”
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-8 relative overflow-hidden group hover:border-magic-400 transition-colors">
+                        <div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                            <i class="fas fa-bullseye text-8xl text-magic-400"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-white mb-4">Misi & Tujuan</h3>
+                        <ul class="space-y-3 text-gray-300 relative z-10 text-sm">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-star text-magic-gold mt-1"></i>
+                                <span>Memberikan kesempatan yang adil dan inklusif bagi peserta didik se-Indonesia.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-star text-magic-gold mt-1"></i>
+                                <span>Mendorong kolaborasi dan etika kompetisi, sportivitas, serta integritas.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-star text-magic-gold mt-1"></i>
+                                <span>Meningkatkan dan mengembangkan potensi, bakat, serta minat siswa pada bidang sains.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Guidebook & Silabus -->
+    <section class="py-16 relative z-10 bg-magic-800/20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="glass-panel p-8 md:p-12 border-2 border-magic-400 shadow-glow bg-magic-900/80 rounded-2xl">
+                <div class="flex justify-center mb-6">
+                    <div class="w-20 h-20 bg-magic-700/50 rounded-full flex items-center justify-center">
+                        <i class="fas fa-book-open text-4xl text-magic-gold"></i>
+                    </div>
+                </div>
+                <h2 class="text-3xl font-display font-bold text-white mb-4">Guidebook & Silabus</h2>
+                <p class="text-gray-300 mb-8 max-w-2xl mx-auto">Pelajari seluruh syarat, ketentuan lomba, tata cara pendaftaran, hingga cakupan materi yang akan diujikan pada Superstar Science Olympiad tahun ini.</p>
+                <a href="https://drive.google.com/drive/folders/1cspQ7u0dRQfNj_iCzWDhvB0gfCiiIYr6?usp=drive_link" target="_blank" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold rounded-full text-magic-900 bg-magic-gold hover:bg-yellow-400 shadow-gold-glow transition-all duration-300 transform hover:scale-105">
+                    <i class="fas fa-download mr-2"></i> Akses Guidebook
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bidang Lomba -->
+    <section id="bidang" class="py-24 bg-magic-800/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">Bidang Lomba</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Pilih bidang keahlianmu dan buktikan kemampuanmu di tingkat nasional.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- SMA/MA -->
+                <div class="glass-panel p-8 border-t-4 border-t-magic-400 hover:shadow-glow transition-all">
+                    <div class="flex items-center gap-4 mb-8 border-b border-magic-700 pb-4">
+                        <div class="w-12 h-12 rounded-lg bg-magic-700 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-white">SMA/MA/SMK/Sederajat</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 bg-magic-900/50 p-3 rounded-lg"><i class="fas fa-dna text-green-400"></i> Biologi</div>
+                        <div class="flex items-center gap-3 bg-magic-900/50 p-3 rounded-lg"><i class="fas fa-calculator text-blue-400"></i> Matematika</div>
+                        <div class="flex items-center gap-3 bg-magic-900/50 p-3 rounded-lg"><i class="fas fa-atom text-cyan-400"></i> Fisika</div>
+                        <div class="flex items-center gap-3 bg-magic-900/50 p-3 rounded-lg"><i class="fas fa-flask text-purple-400"></i> Kimia</div>
+                        <div class="flex items-center gap-3 bg-magic-900/50 p-3 rounded-lg"><i class="fas fa-meteor text-orange-400"></i> Astronomi</div>
+                        <div class="flex items-center gap-3 bg-magic-900/50 p-3 rounded-lg"><i class="fas fa-globe-americas text-emerald-400"></i> Geografi</div>
+                        <div class="flex items-center gap-3 bg-magic-900/50 p-3 rounded-lg"><i class="fas fa-laptop-code text-gray-300"></i> Informatika</div>
+                        <div class="flex items-center gap-3 bg-magic-900/50 p-3 rounded-lg"><i class="fas fa-chart-line text-yellow-400"></i> Ekonomi</div>
+                        <div class="flex items-center gap-3 bg-magic-900/50 p-3 rounded-lg col-span-2"><i class="fas fa-mountain text-amber-600"></i> Kebumian</div>
+                    </div>
+                </div>
+
+                <!-- SMP/MTs -->
+                <div class="glass-panel p-8 border-t-4 border-t-magic-gold hover:shadow-gold-glow transition-all">
+                    <div class="flex items-center gap-4 mb-8 border-b border-magic-700 pb-4">
+                        <div class="w-12 h-12 rounded-lg bg-yellow-600/30 flex items-center justify-center">
+                            <i class="fas fa-user-graduate text-2xl text-magic-gold"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold text-white">SMP/MTs/Sederajat</h3>
+                    </div>
+                    <div class="grid grid-cols-1 gap-4">
+                        <div class="flex items-center gap-4 bg-magic-900/50 p-4 rounded-lg text-lg">
+                            <i class="fas fa-microscope text-2xl text-green-400 w-8 text-center"></i> 
+                            <span>Ilmu Pengetahuan Alam (IPA)</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-magic-900/50 p-4 rounded-lg text-lg">
+                            <i class="fas fa-users text-2xl text-blue-400 w-8 text-center"></i> 
+                            <span>Ilmu Pengetahuan Sosial (IPS)</span>
+                        </div>
+                        <div class="flex items-center gap-4 bg-magic-900/50 p-4 rounded-lg text-lg">
+                            <i class="fas fa-square-root-alt text-2xl text-purple-400 w-8 text-center"></i> 
+                            <span>Matematika (MTK)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">Timeline Kegiatan</h2>
+                <p class="text-gray-400">Catat tanggal pentingnya dan jangan sampai terlewat!</p>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-magic-700"></div>
+                
+                <div class="space-y-12">
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0">
+                            <h4 class="text-xl font-bold text-white">Pendaftaran Gelombang 1</h4>
+                            <p class="text-magic-400">20 September - 4 Oktober 2026</p>
+                        </div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-glow"></div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12"></div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-glow"></div>
+                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0">
+                            <h4 class="text-xl font-bold text-white">Pendaftaran Gelombang 2</h4>
+                            <p class="text-magic-400">5 Oktober - 6 November 2026</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0">
+                            <h4 class="text-xl font-bold text-white">Pendaftaran Gelombang 3</h4>
+                            <p class="text-magic-400">7 November 2026 - 13 Januari 2027</p>
+                        </div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-glow"></div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12"></div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-gold z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-gold-glow"></div>
+                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0">
+                            <h4 class="text-xl font-bold text-white">Technical Meeting</h4>
+                            <p class="text-magic-gold">15 Januari 2027</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0">
+                            <h4 class="text-xl font-bold text-white">Simulasi</h4>
+                            <p class="text-magic-gold">19 - 20 Januari 2027</p>
+                        </div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-gold z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-gold-glow"></div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12"></div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-red-500 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.5)]"></div>
+                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0">
+                            <h4 class="text-xl font-bold text-white">Penyisihan</h4>
+                            <p class="text-red-400">23 Januari 2027</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0">
+                            <h4 class="text-xl font-bold text-white">Final</h4>
+                            <p class="text-red-400">28 Januari 2027</p>
+                        </div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-red-500 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.5)]"></div>
+                        <div class="md:w-5/12"></div>
+                    </div>
+
+                    <div class="relative flex flex-col md:flex-row items-center justify-between group">
+                        <div class="md:w-5/12"></div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-green-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-[0_0_15px_rgba(74,222,128,0.5)]"></div>
+                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0">
+                            <h4 class="text-xl font-bold text-white">Pengumuman</h4>
+                            <p class="text-green-400">1 Februari 2027</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biaya, Fasilitas & Hadiah -->
+    <section id="biaya" class="py-24 bg-magic-800/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">Pendaftaran & Fasilitas</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Daftar sekarang dan dapatkan berbagai fasilitas menarik. 
+                <span class="block text-magic-gold mt-2 font-semibold">*Mendaftar 10 Peserta secara Kolektif, Free 1 Peserta!</span></p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- SMP Pricing -->
+                <div class="glass-panel p-8 flex flex-col h-full border-t-4 border-magic-400">
+                    <h3 class="text-2xl font-bold text-center mb-2">SMP/MTs</h3>
+                    <p class="text-center text-gray-400 mb-6 pb-6 border-b border-magic-700">Biaya Pendaftaran</p>
+                    
+                    <ul class="space-y-6 flex-grow">
+                        <li class="flex justify-between items-center bg-magic-900/50 p-4 rounded-lg">
+                            <span class="font-medium text-gray-300">Gelombang 1</span>
+                            <span class="text-xl font-bold text-magic-400">Rp 50.000</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-magic-900/50 p-4 rounded-lg">
+                            <span class="font-medium text-gray-300">Gelombang 2</span>
+                            <span class="text-xl font-bold text-magic-400">Rp 65.000</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-magic-900/50 p-4 rounded-lg">
+                            <span class="font-medium text-gray-300">Gelombang 3</span>
+                            <span class="text-xl font-bold text-magic-400">Rp 75.000</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#" class="mt-8 block w-full py-4 px-4 bg-magic-400 text-white text-center font-bold rounded-lg hover:bg-magic-600 transition-colors">
+                        Daftar Sekarang (SMP/MTs)
+                    </a>
+                </div>
+
+                <!-- SMA Pricing -->
+                <div class="glass-panel p-8 flex flex-col h-full border-t-4 border-magic-gold transform lg:-translate-y-4 shadow-gold-glow relative">
+                    <div class="absolute top-0 right-0 bg-magic-gold text-magic-900 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULER</div>
+                    <h3 class="text-2xl font-bold text-center mb-2">SMA/MA/SMK</h3>
+                    <p class="text-center text-gray-400 mb-6 pb-6 border-b border-magic-700">Biaya Pendaftaran</p>
+                    
+                    <ul class="space-y-6 flex-grow">
+                        <li class="flex justify-between items-center bg-magic-900/50 p-4 rounded-lg">
+                            <span class="font-medium text-gray-300">Gelombang 1</span>
+                            <span class="text-xl font-bold text-magic-gold">Rp 60.000</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-magic-900/50 p-4 rounded-lg">
+                            <span class="font-medium text-gray-300">Gelombang 2</span>
+                            <span class="text-xl font-bold text-magic-gold">Rp 65.000</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-magic-900/50 p-4 rounded-lg">
+                            <span class="font-medium text-gray-300">Gelombang 3</span>
+                            <span class="text-xl font-bold text-magic-gold">Rp 75.000</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="#" class="mt-8 block w-full py-4 px-4 bg-magic-gold text-magic-900 text-center font-bold rounded-lg hover:bg-yellow-400 transition-colors">
+                        Daftar Sekarang (SMA/MA)
+                    </a>
+                </div>
+
+                <!-- Fasilitas & Hadiah -->
+                <div class="flex flex-col gap-8">
+                    <!-- Fasilitas -->
+                    <div class="glass-panel p-6">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-box-open text-magic-400"></i> Fasilitas
+                        </h3>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex items-center gap-3"><i class="fas fa-laptop-code text-magic-gold"></i> Akses CBT Online</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-chart-bar text-magic-gold"></i> Pemeringkatan Nasional</li>
+                            <li class="flex items-center gap-3"><i class="fas fa-file-alt text-magic-gold"></i> Soal dan Kunci Jawaban</li>
+                        </ul>
+                    </div>
+
+                    <!-- Hadiah -->
+                    <div class="glass-panel p-6 flex-grow border-l-4 border-magic-400">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-trophy text-yellow-400"></i> Prize / Hadiah
+                        </h3>
+                        <ul class="space-y-3 text-sm text-gray-300">
+                            <li class="flex items-start gap-3"><i class="fas fa-award text-magic-gold mt-1"></i> Sertifikat</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-money-bill-wave text-magic-gold mt-1"></i> Uang Pembinaan</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-medal text-magic-gold mt-1"></i> Medali terkurasi Puspresnas</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-ticket-alt text-magic-gold mt-1"></i> Golden Ticket MAN 1 Batam</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pembayaran & Kontak -->
+    <section class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <!-- Payment -->
+                <div class="glass-panel p-8 text-center bg-gradient-to-br from-magic-900 to-magic-800">
+                    <div class="w-16 h-16 mx-auto bg-magic-700 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-wallet text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Informasi Pembayaran</h3>
+                    <p class="text-gray-400 mb-6">Lakukan pembayaran pendaftaran hanya ke rekening resmi di bawah ini.</p>
+                    
+                    <div class="bg-black/30 p-6 rounded-xl border border-magic-600 inline-block">
+                        <p class="text-sm text-magic-400 mb-1">Bank Syariah Indonesia (BSI)</p>
+                        <p class="text-3xl font-display font-bold tracking-widest text-white mb-2">7271 8848 87</p>
+                        <p class="text-sm text-gray-300">a.n TIM OLIMPIADE SSO</p>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="glass-panel p-8">
+                    <h3 class="text-2xl font-bold mb-6 border-b border-magic-700 pb-4">Narahubung (WhatsApp)</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 bg-magic-900/50 p-4 rounded-xl">
+                            <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center text-green-400">
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">Narahubung SMA (Humas 1)</p>
+                                <a href="https://wa.me/6285926562876" class="text-xl font-bold hover:text-green-400 transition-colors">0859-2656-2876</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-magic-900/50 p-4 rounded-xl">
+                            <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center text-green-400">
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-400">Narahubung SMP (Humas 2)</p>
+                                <a href="https://wa.me/6285926562878" class="text-xl font-bold hover:text-green-400 transition-colors">0859-2656-2878</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Gallery & Testimoni -->
+    <section id="galeri" class="py-24 relative border-t border-magic-800 bg-magic-900/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">Our Gallery & Testimoni</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Momen berharga dan pengalaman tak terlupakan dari para Superstar di ajang Superstar Science Olympiad.</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-20">
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                    <img src="gallery SSO (1).jpg" alt="Gallery SSO 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                    <img src="gallery SSO (2).jpg" alt="Gallery SSO 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                    <img src="gallery SSO (3).jpg" alt="Gallery SSO 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                    <img src="gallery SSO (4).jpg" alt="Gallery SSO 4" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                    <img src="gallery SSO (5).jpg" alt="Gallery SSO 5" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                    <img src="gallery SSO (6).jpg" alt="Gallery SSO 6" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                </div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Jose -->
+                <div class="glass-panel p-8 border-l-4 border-magic-gold relative">
+                    <i class="fas fa-quote-right absolute top-6 right-6 text-4xl text-magic-800 opacity-50"></i>
+                    <div class="flex items-center gap-4 mb-6 border-b border-magic-700/50 pb-4">
+                        <div class="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-medal text-2xl text-yellow-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Jose William Theruna</h4>
+                            <p class="text-xs text-magic-gold font-semibold uppercase tracking-wider">Emas Matematika SMA&SMP SSO 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm italic leading-relaxed">"Saya Jose William Theruna, dari SMP Bambini, Makassar, Sulawesi Selatan, sangat senang bisa mengikuti lomba SSO 2025 ini secara online, dan juga bisa mandapatkan 2 medali. Soal SSO tahun ini sangat menarik dan unik. Harapannya, semoga tahun depan masih bisa mengikuti lomba SSO. Terima kasih."</p>
+                </div>
+
+                <!-- Ismi -->
+                <div class="glass-panel p-8 border-l-4 border-orange-500 relative">
+                    <i class="fas fa-quote-right absolute top-6 right-6 text-4xl text-magic-800 opacity-50"></i>
+                    <div class="flex items-center gap-4 mb-6 border-b border-magic-700/50 pb-4">
+                        <div class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-medal text-2xl text-orange-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Ismi Nur Fadlillah</h4>
+                            <p class="text-xs text-orange-400 font-semibold uppercase tracking-wider">Perunggu Ekonomi SMA SSO 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm italic leading-relaxed">"Suka banget soalnya perlu berpikir kritis, cocok untuk melatih pemahaman tentang ekonomi. SSO 2025 bikin aku belajar penuh walaupun dapet medalis perunggu tapii merasa keren karena terkurasi jugaaa, terimakasih MAN 1 Batam, tetap semangat untuk tahun depan ! ^^"</p>
+                </div>
+
+                <!-- Wenlynn -->
+                <div class="glass-panel p-8 border-l-4 border-orange-500 relative">
+                    <i class="fas fa-quote-right absolute top-6 right-6 text-4xl text-magic-800 opacity-50"></i>
+                    <div class="flex items-center gap-4 mb-6 border-b border-magic-700/50 pb-4">
+                        <div class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-medal text-2xl text-orange-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Wenlynn Chen</h4>
+                            <p class="text-xs text-orange-400 font-semibold uppercase tracking-wider">Perunggu IPA SMP SSO 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm italic leading-relaxed">"Ini kedua kalinya saya berpartisipasi dalam lomba IPA tingkat SMP/MTs dan jujur saja lomba SSO semakin berkembang dari tahun ke tahun. Mulai dari yang dulunya masih tingkat provinsi Kepulauan Riau, sekarang sudah menjadi lomba tingkat nasional, sehingga membuat jauh lebih menantang karena banyak saingan dan itupun membuat saya jauh lebih semangat lagi untuk berlomba. Tak sangka saya berkesempatan mendapatkan medali perunggu. Pengalaman ini tak terlupakan dan saya akan lebih semangat lagi!"</p>
+                </div>
+
+                <!-- Eliana -->
+                <div class="glass-panel p-8 border-l-4 border-orange-500 relative">
+                    <i class="fas fa-quote-right absolute top-6 right-6 text-4xl text-magic-800 opacity-50"></i>
+                    <div class="flex items-center gap-4 mb-6 border-b border-magic-700/50 pb-4">
+                        <div class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-medal text-2xl text-orange-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Eliana Maulidia Rismawati</h4>
+                            <p class="text-xs text-orange-400 font-semibold uppercase tracking-wider">Perunggu Biologi SMA SSO 2025</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 text-sm italic leading-relaxed">"From SSO 2025 I learned a lot, from here I also learned more seriously because from SSO 2025 I could see that the competition was quite tight. Yang paling berkesan ituu saat pengerjaan, saya bisa melihat wajah dari setiap teman teman yang sungguh membuat saya terkesan dengan ambisius dan tekad setiap anak... Semangattt buat teman teman semuaaa yang berjuang diluar sana, I love you all~"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Official Merchandise / Shopee -->
+    <section class="py-16 relative">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-panel p-8 md:p-12 border-2 border-orange-500/30 shadow-[0_0_25px_rgba(249,115,22,0.15)] bg-gradient-to-br from-magic-900 to-[#2c1338] rounded-3xl relative overflow-hidden flex flex-col md:flex-row items-center gap-8 group hover:border-orange-500/50 transition-colors duration-500">
+                
+                <!-- Glow Effect Background -->
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-orange-500/10 rounded-full blur-[80px] pointer-events-none group-hover:bg-orange-500/20 transition-colors duration-700"></div>
+
+                <!-- Image Character -->
+                <div class="w-full md:w-1/3 flex justify-center relative z-10">
+                    <img src="SHOPEE SSO.jpg" alt="Karakter Shopee SSO" class="w-48 md:w-56 h-auto object-contain drop-shadow-[0_0_20px_rgba(255,255,255,0.1)] group-hover:scale-105 transition-transform duration-500">
+                </div>
+
+                <!-- Text & Button -->
+                <div class="w-full md:w-2/3 text-center md:text-left relative z-10">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-bold mb-4">
+                        <i class="fas fa-shopping-bag"></i> Official Merchandise
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-display font-bold text-white mb-4">Kunjungi Toko Resmi Kami!</h3>
+                    <p class="text-gray-300 mb-8 max-w-xl text-sm md:text-base leading-relaxed">
+                        Ingin mengoleksi *merchandise* eksklusif atau butuh perlengkapan olimpiade resmi dari Superstar Science Olympiad? Semuanya kini tersedia secara resmi di Shopee.
+                    </p>
+                    <a href="https://shopee.co.id/sso.edu" target="_blank" class="inline-flex items-center justify-center px-8 py-3.5 text-lg font-bold rounded-full text-white bg-gradient-to-r from-orange-500 to-[#ee4d2d] hover:from-orange-400 hover:to-[#ff6748] shadow-[0_0_15px_rgba(238,77,45,0.4)] transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-shopping-cart mr-2"></i> Kunjungi Shopee SSO
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass-nav border-t border-magic-800 pt-16 pb-8 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full overflow-hidden border border-magic-400">
+                            <img src="LOGO SSO.jpg" alt="Logo SSO" class="w-full h-full object-cover">
+                        </div>
+                        <span class="font-display font-bold text-xl text-white">Superstar Science Olympiad</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Beyond the spells, Beyond the stars, Become a Superstar.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Tautan Penting</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-magic-400 transition-colors"><i class="fas fa-external-link-alt mr-2 text-xs"></i> Pendaftaran (Segera Dibuka)</a></li>
+                        <li><a href="https://manbatam.sch.id" target="_blank" class="hover:text-magic-400 transition-colors"><i class="fas fa-globe mr-2 text-xs"></i> Website MAN Batam</a></li>
+                        <li><a href="https://simt.kemendikdasmen.go.id" target="_blank" class="hover:text-magic-400 transition-colors"><i class="fas fa-check-circle mr-2 text-xs"></i> Cek Kurasi Puspresnas</a></li>
+                        <li><a href="https://drive.google.com/drive/folders/1cspQ7u0dRQfNj_iCzWDhvB0gfCiiIYr6?usp=drive_link" target="_blank" class="hover:text-magic-400 transition-colors"><i class="fas fa-book mr-2 text-xs"></i> Guidebook & Silabus</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-6">Sosial Media</h4>
+                    <div class="space-y-4">
+                        <a href="https://www.instagram.com/saintismanbatam?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" class="flex items-center gap-3 text-gray-400 hover:text-pink-400 transition-colors">
+                            <i class="fab fa-instagram text-xl"></i> @saintismanbatam
+                        </a>
+                        <a href="https://www.instagram.com/man1kotabatam?utm_source=ig_web_button_share_sheet&stkn=ZDNlZDc0MzIxNw==" target="_blank" class="flex items-center gap-3 text-gray-400 hover:text-pink-400 transition-colors">
+                            <i class="fab fa-instagram text-xl"></i> @man1kotabatam
+                        </a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ssomanbatam@gmail.com" target="_blank" class="flex items-center gap-3 text-gray-400 hover:text-pink-400 transition-colors">
+                            <i class="fas fa-envelope text-xl"></i> ssomanbatam@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-magic-800 text-center text-sm text-gray-500">
+                <p>&copy; 2027 Tim Olimpiade MAN Batam. All rights reserved. 6th Superstar Science Olympiad.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
