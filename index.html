@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,8 +6,9 @@
     <title>6TH SUPERSTAR SCIENCE OLYMPIAD</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Tambahan Link CSS AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -107,7 +107,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" data-aos="fade-down" data-aos-once="true">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 flex items-center gap-3">
@@ -137,7 +137,7 @@
 
     <!-- Hero Section -->
     <section id="beranda" class="pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center" data-aos="zoom-in" data-aos-duration="1200">
             <a href="https://simt.kemendikdasmen.go.id" target="_blank" class="inline-flex items-center gap-2 px-5 py-2 rounded-full glass-panel border-magic-400/50 mb-8 animate-fade-in-up text-sm text-magic-glow hover:bg-magic-800 transition-colors cursor-pointer">
                 <i class="fas fa-check-circle text-green-400"></i>
                 Telah terkurasi Puspresnas. Cek simt.kemendikdasmen.go.id
@@ -164,7 +164,7 @@
     </section>
 
     <!-- Logo / Organized By -->
-    <section class="py-10 border-y border-magic-800 bg-magic-900/50">
+    <section class="py-10 border-y border-magic-800 bg-magic-900/50" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-4 flex flex-col items-center">
             <p class="text-sm text-gray-400 uppercase tracking-widest mb-6">Diselenggarakan Oleh</p>
             <div class="flex items-center gap-8 md:gap-16 opacity-80 hover:opacity-100 transition-opacity">
@@ -186,7 +186,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
                 <!-- Text Content -->
-                <div class="space-y-8">
+                <div class="space-y-8" data-aos="fade-right">
                     <div>
                         <h2 class="text-3xl md:text-4xl font-display font-bold gradient-text mb-4">Latar Belakang</h2>
                         <div class="w-20 h-1 bg-magic-400 rounded"></div>
@@ -206,7 +206,7 @@
                 </div>
 
                 <!-- Visi Misi Accordion / Cards -->
-                <div class="space-y-6">
+                <div class="space-y-6" data-aos="fade-left">
                     <div class="glass-panel p-8 relative overflow-hidden group hover:border-magic-400 transition-colors">
                         <div class="absolute top-0 right-0 p-4 opacity-20 group-hover:opacity-40 transition-opacity">
                             <i class="fas fa-eye text-6xl text-magic-400"></i>
@@ -245,7 +245,7 @@
 
     <!-- Guidebook & Silabus -->
     <section class="py-16 relative z-10 bg-magic-800/20">
-        <div class="max-w-4xl mx-auto px-4 text-center">
+        <div class="max-w-4xl mx-auto px-4 text-center" data-aos="flip-up">
             <div class="glass-panel p-8 md:p-12 border-2 border-magic-400 shadow-glow bg-magic-900/80 rounded-2xl">
                 <div class="flex justify-center mb-6">
                     <div class="w-20 h-20 bg-magic-700/50 rounded-full flex items-center justify-center">
@@ -264,14 +264,14 @@
     <!-- Bidang Lomba -->
     <section id="bidang" class="py-24 bg-magic-800/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-down">
                 <h2 class="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">Bidang Lomba</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">Pilih bidang keahlianmu dan buktikan kemampuanmu di tingkat nasional.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12">
                 <!-- SMA/MA -->
-                <div class="glass-panel p-8 border-t-4 border-t-magic-400 hover:shadow-glow transition-all">
+                <div class="glass-panel p-8 border-t-4 border-t-magic-400 hover:shadow-glow transition-all" data-aos="fade-up-right">
                     <div class="flex items-center gap-4 mb-8 border-b border-magic-700 pb-4">
                         <div class="w-12 h-12 rounded-lg bg-magic-700 flex items-center justify-center">
                             <i class="fas fa-graduation-cap text-2xl text-white"></i>
@@ -292,7 +292,7 @@
                 </div>
 
                 <!-- SMP/MTs -->
-                <div class="glass-panel p-8 border-t-4 border-t-magic-gold hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-8 border-t-4 border-t-magic-gold hover:shadow-gold-glow transition-all" data-aos="fade-up-left">
                     <div class="flex items-center gap-4 mb-8 border-b border-magic-700 pb-4">
                         <div class="w-12 h-12 rounded-lg bg-yellow-600/30 flex items-center justify-center">
                             <i class="fas fa-user-graduate text-2xl text-magic-gold"></i>
@@ -321,7 +321,7 @@
     <!-- Timeline -->
     <section id="timeline" class="py-24 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">Timeline Kegiatan</h2>
                 <p class="text-gray-400">Catat tanggal pentingnya dan jangan sampai terlewat!</p>
             </div>
@@ -331,72 +331,72 @@
                 
                 <div class="space-y-12">
                     <div class="relative flex flex-col md:flex-row items-center justify-between group">
-                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0">
+                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0" data-aos="fade-right">
                             <h4 class="text-xl font-bold text-white">Pendaftaran Gelombang 1</h4>
                             <p class="text-magic-400">20 September - 4 Oktober 2026</p>
                         </div>
-                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-glow"></div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-glow" data-aos="zoom-in"></div>
                         <div class="md:w-5/12"></div>
                     </div>
 
                     <div class="relative flex flex-col md:flex-row items-center justify-between group">
                         <div class="md:w-5/12"></div>
-                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-glow"></div>
-                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0">
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-glow" data-aos="zoom-in"></div>
+                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0" data-aos="fade-left">
                             <h4 class="text-xl font-bold text-white">Pendaftaran Gelombang 2</h4>
                             <p class="text-magic-400">5 Oktober - 6 November 2026</p>
                         </div>
                     </div>
 
                     <div class="relative flex flex-col md:flex-row items-center justify-between group">
-                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0">
+                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0" data-aos="fade-right">
                             <h4 class="text-xl font-bold text-white">Pendaftaran Gelombang 3</h4>
                             <p class="text-magic-400">7 November 2026 - 13 Januari 2027</p>
                         </div>
-                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-glow"></div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-glow" data-aos="zoom-in"></div>
                         <div class="md:w-5/12"></div>
                     </div>
 
                     <div class="relative flex flex-col md:flex-row items-center justify-between group">
                         <div class="md:w-5/12"></div>
-                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-gold z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-gold-glow"></div>
-                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0">
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-gold z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-gold-glow" data-aos="zoom-in"></div>
+                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0" data-aos="fade-left">
                             <h4 class="text-xl font-bold text-white">Technical Meeting</h4>
                             <p class="text-magic-gold">15 Januari 2027</p>
                         </div>
                     </div>
 
                     <div class="relative flex flex-col md:flex-row items-center justify-between group">
-                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0">
+                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0" data-aos="fade-right">
                             <h4 class="text-xl font-bold text-white">Simulasi</h4>
                             <p class="text-magic-gold">19 - 20 Januari 2027</p>
                         </div>
-                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-gold z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-gold-glow"></div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-magic-gold z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-gold-glow" data-aos="zoom-in"></div>
                         <div class="md:w-5/12"></div>
                     </div>
 
                     <div class="relative flex flex-col md:flex-row items-center justify-between group">
                         <div class="md:w-5/12"></div>
-                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-red-500 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.5)]"></div>
-                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0">
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-red-500 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.5)]" data-aos="zoom-in"></div>
+                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0" data-aos="fade-left">
                             <h4 class="text-xl font-bold text-white">Penyisihan</h4>
                             <p class="text-red-400">23 Januari 2027</p>
                         </div>
                     </div>
 
                     <div class="relative flex flex-col md:flex-row items-center justify-between group">
-                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0">
+                        <div class="md:w-5/12 text-center md:text-right mb-4 md:mb-0" data-aos="fade-right">
                             <h4 class="text-xl font-bold text-white">Final</h4>
                             <p class="text-red-400">28 Januari 2027</p>
                         </div>
-                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-red-500 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.5)]"></div>
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-red-500 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-[0_0_15px_rgba(239,68,68,0.5)]" data-aos="zoom-in"></div>
                         <div class="md:w-5/12"></div>
                     </div>
 
                     <div class="relative flex flex-col md:flex-row items-center justify-between group">
                         <div class="md:w-5/12"></div>
-                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-green-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-[0_0_15px_rgba(74,222,128,0.5)]"></div>
-                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0">
+                        <div class="w-10 h-10 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-magic-900 border-4 border-green-400 z-10 group-hover:scale-125 transition-transform flex items-center justify-center shadow-[0_0_15px_rgba(74,222,128,0.5)]" data-aos="zoom-in"></div>
+                        <div class="md:w-5/12 text-center md:text-left mt-4 md:mt-0" data-aos="fade-left">
                             <h4 class="text-xl font-bold text-white">Pengumuman</h4>
                             <p class="text-green-400">1 Februari 2027</p>
                         </div>
@@ -409,7 +409,7 @@
     <!-- Biaya, Fasilitas & Hadiah -->
     <section id="biaya" class="py-24 bg-magic-800/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="zoom-in">
                 <h2 class="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">Pendaftaran & Fasilitas</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">Daftar sekarang dan dapatkan berbagai fasilitas menarik. 
                 <span class="block text-magic-gold mt-2 font-semibold">*Mendaftar 10 Peserta secara Kolektif, Free 1 Peserta!</span></p>
@@ -418,7 +418,7 @@
             <div class="grid lg:grid-cols-3 gap-8">
                 
                 <!-- SMP Pricing -->
-                <div class="glass-panel p-8 flex flex-col h-full border-t-4 border-magic-400">
+                <div class="glass-panel p-8 flex flex-col h-full border-t-4 border-magic-400" data-aos="fade-up" data-aos-delay="0">
                     <h3 class="text-2xl font-bold text-center mb-2">SMP/MTs</h3>
                     <p class="text-center text-gray-400 mb-6 pb-6 border-b border-magic-700">Biaya Pendaftaran</p>
                     
@@ -443,7 +443,7 @@
                 </div>
 
                 <!-- SMA Pricing -->
-                <div class="glass-panel p-8 flex flex-col h-full border-t-4 border-magic-gold transform lg:-translate-y-4 shadow-gold-glow relative">
+                <div class="glass-panel p-8 flex flex-col h-full border-t-4 border-magic-gold transform lg:-translate-y-4 shadow-gold-glow relative" data-aos="zoom-in" data-aos-delay="150">
                     <div class="absolute top-0 right-0 bg-magic-gold text-magic-900 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULER</div>
                     <h3 class="text-2xl font-bold text-center mb-2">SMA/MA/SMK</h3>
                     <p class="text-center text-gray-400 mb-6 pb-6 border-b border-magic-700">Biaya Pendaftaran</p>
@@ -469,7 +469,7 @@
                 </div>
 
                 <!-- Fasilitas & Hadiah -->
-                <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-8" data-aos="fade-up" data-aos-delay="300">
                     <!-- Fasilitas -->
                     <div class="glass-panel p-6">
                         <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
@@ -506,7 +506,7 @@
             <div class="grid md:grid-cols-2 gap-8">
                 
                 <!-- Payment -->
-                <div class="glass-panel p-8 text-center bg-gradient-to-br from-magic-900 to-magic-800">
+                <div class="glass-panel p-8 text-center bg-gradient-to-br from-magic-900 to-magic-800" data-aos="flip-left">
                     <div class="w-16 h-16 mx-auto bg-magic-700 rounded-full flex items-center justify-center mb-6">
                         <i class="fas fa-wallet text-3xl text-white"></i>
                     </div>
@@ -521,7 +521,7 @@
                 </div>
 
                 <!-- Contact -->
-                <div class="glass-panel p-8">
+                <div class="glass-panel p-8" data-aos="flip-right">
                     <h3 class="text-2xl font-bold mb-6 border-b border-magic-700 pb-4">Narahubung (WhatsApp)</h3>
                     <div class="space-y-6">
                         <div class="flex items-center gap-4 bg-magic-900/50 p-4 rounded-xl">
@@ -553,7 +553,7 @@
     <!-- Top 1 (Medali Emas) 2026 - 12 Mapel -->
     <section id="pemenang" class="py-24 relative bg-purple-60/60 border-t border-purple-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-yellow-100 border border-yellow-300 text-yellow-700 text-sm font-bold mb-4">
                     <i class="fas fa-trophy"></i> Hall of Fame 2026
                 </div>
@@ -565,7 +565,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                 
                 <!-- SMA 1: Biologi -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="0">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-magic-600 bg-magic-50 px-2.5 py-1 rounded">SMA / MA</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -579,7 +579,7 @@
                 </div>
 
                 <!-- SMA 2: Matematika -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="50">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-magic-600 bg-magic-50 px-2.5 py-1 rounded">SMA / MA</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -593,7 +593,7 @@
                 </div>
 
                 <!-- SMA 3: Fisika -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="100">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-magic-600 bg-magic-50 px-2.5 py-1 rounded">SMA / MA</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -607,7 +607,7 @@
                 </div>
 
                 <!-- SMA 4: Kimia -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="150">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-magic-600 bg-magic-50 px-2.5 py-1 rounded">SMA / MA</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -621,7 +621,7 @@
                 </div>
 
                 <!-- SMA 5: Astronomi -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="200">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-magic-600 bg-magic-50 px-2.5 py-1 rounded">SMA / MA</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -635,7 +635,7 @@
                 </div>
 
                 <!-- SMA 6: Geografi -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="250">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-magic-600 bg-magic-50 px-2.5 py-1 rounded">SMA / MA</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -649,7 +649,7 @@
                 </div>
 
                 <!-- SMA 7: Informatika -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="300">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-magic-600 bg-magic-50 px-2.5 py-1 rounded">SMA / MA</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -663,7 +663,7 @@
                 </div>
 
                 <!-- SMA 8: Ekonomi -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="350">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-magic-600 bg-magic-50 px-2.5 py-1 rounded">SMA / MA</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -677,7 +677,7 @@
                 </div>
 
                 <!-- SMA 9: Kebumian -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="400">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-magic-600 bg-magic-50 px-2.5 py-1 rounded">SMA / MA</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -691,7 +691,7 @@
                 </div>
 
                 <!-- SMP 10: IPA -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="450">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded">SMP / MTs</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -705,7 +705,7 @@
                 </div>
 
                 <!-- SMP 11: IPS -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="500">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded">SMP / MTs</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -719,7 +719,7 @@
                 </div>
 
                 <!-- SMP 12: Matematika -->
-                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all">
+                <div class="glass-panel p-6 border-l-4 border-yellow-500 bg-white/90 hover:shadow-gold-glow transition-all" data-aos="zoom-in" data-aos-delay="550">
                     <div class="flex items-center justify-between mb-3">
                         <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-50 px-2.5 py-1 rounded">SMP / MTs</span>
                         <i class="fas fa-medal text-yellow-500 text-xl"></i>
@@ -735,7 +735,7 @@
             </div>
 
             <!-- Button Lihat Selengkapnya Google Drive -->
-            <div class="text-center">
+            <div class="text-center" data-aos="fade-up">
                 <a href="https://drive.google.com/drive/folders/1WLqAt5eGuf-0D0pzMuuvDQ1AnfL2dyqe?usp=drive_link" target="_blank" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold rounded-full text-magic-900 bg-magic-gold hover:bg-yellow-400 shadow-gold-glow transition-all duration-300 transform hover:scale-105">
                     <i class="fas fa-folder-open mr-2"></i> Lihat Selengkapnya
                 </a>
@@ -747,29 +747,29 @@
     <!-- Our Gallery & Testimoni -->
     <section id="galeri" class="py-24 relative border-t border-magic-800 bg-magic-900/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-5xl font-display font-bold gradient-text mb-4">Our Gallery & Testimoni</h2>
                 <p class="text-gray-400 max-w-2xl mx-auto">Momen berharga dan pengalaman tak terlupakan dari para Superstar di ajang Superstar Science Olympiad.</p>
             </div>
 
             <!-- Gallery Grid -->
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-20">
-                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100" data-aos="zoom-in" data-aos-delay="0">
                     <img src="gallery SSO (1).png" alt="Gallery SSO 1" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                 </div>
-                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100" data-aos="zoom-in" data-aos-delay="100">
                     <img src="gallery SSO (2).png" alt="Gallery SSO 2" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                 </div>
-                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100" data-aos="zoom-in" data-aos-delay="200">
                     <img src="gallery SSO (3).png" alt="Gallery SSO 3" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                 </div>
-                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100" data-aos="zoom-in" data-aos-delay="300">
                     <img src="gallery SSO (4).png" alt="Gallery SSO 4" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                 </div>
-                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100" data-aos="zoom-in" data-aos-delay="400">
                     <img src="gallery SSO (5).png" alt="Gallery SSO 5" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                 </div>
-                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100">
+                <div class="overflow-hidden rounded-xl border border-gray-200 shadow-sm hover:border-magic-400 transition-colors aspect-video bg-gray-100" data-aos="zoom-in" data-aos-delay="500">
                     <img src="gallery SSO (6).png" alt="Gallery SSO 6" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
                 </div>
             </div>
@@ -777,7 +777,7 @@
             <!-- Testimonials Grid -->
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Jose -->
-                <div class="glass-panel p-8 border-l-4 border-magic-gold relative">
+                <div class="glass-panel p-8 border-l-4 border-magic-gold relative" data-aos="fade-up" data-aos-delay="0">
                     <i class="fas fa-quote-right absolute top-6 right-6 text-4xl text-magic-800 opacity-50"></i>
                     <div class="flex items-center gap-4 mb-6 border-b border-magic-700/50 pb-4">
                         <div class="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center">
@@ -792,7 +792,7 @@
                 </div>
 
                 <!-- Ismi -->
-                <div class="glass-panel p-8 border-l-4 border-orange-500 relative">
+                <div class="glass-panel p-8 border-l-4 border-orange-500 relative" data-aos="fade-up" data-aos-delay="150">
                     <i class="fas fa-quote-right absolute top-6 right-6 text-4xl text-magic-800 opacity-50"></i>
                     <div class="flex items-center gap-4 mb-6 border-b border-magic-700/50 pb-4">
                         <div class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
@@ -807,7 +807,7 @@
                 </div>
 
                 <!-- Wenlynn -->
-                <div class="glass-panel p-8 border-l-4 border-orange-500 relative">
+                <div class="glass-panel p-8 border-l-4 border-orange-500 relative" data-aos="fade-up" data-aos-delay="300">
                     <i class="fas fa-quote-right absolute top-6 right-6 text-4xl text-magic-800 opacity-50"></i>
                     <div class="flex items-center gap-4 mb-6 border-b border-magic-700/50 pb-4">
                         <div class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
@@ -822,7 +822,7 @@
                 </div>
 
                 <!-- Eliana -->
-                <div class="glass-panel p-8 border-l-4 border-orange-500 relative">
+                <div class="glass-panel p-8 border-l-4 border-orange-500 relative" data-aos="fade-up" data-aos-delay="450">
                     <i class="fas fa-quote-right absolute top-6 right-6 text-4xl text-magic-800 opacity-50"></i>
                     <div class="flex items-center gap-4 mb-6 border-b border-magic-700/50 pb-4">
                         <div class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
@@ -841,7 +841,7 @@
 
     <!-- Official Merchandise / Shopee -->
     <section class="py-16 relative">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
             <div class="glass-panel p-8 md:p-12 border-2 border-orange-500/30 shadow-[0_0_25px_rgba(249,115,22,0.15)] bg-gradient-to-br from-magic-900 to-[#2c1338] rounded-3xl relative overflow-hidden flex flex-col md:flex-row items-center gap-8 group hover:border-orange-500/50 transition-colors duration-500">
                 
                 <!-- Glow Effect Background -->
@@ -871,7 +871,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="glass-nav border-t border-magic-800 pt-16 pb-8 mt-8">
+    <footer class="glass-nav border-t border-magic-800 pt-16 pb-8 mt-8" data-aos="fade-up">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                 <div class="space-y-4">
@@ -917,12 +917,14 @@
             </div>
         </div>
     </footer>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Script Inisialisasi AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000, // Durasi animasi 1 detik
-            once: true,     // Animasi hanya berjalan sekali saat di-scroll
-            offset: 100     // Jarak scroll sebelum animasi dimulai
+            duration: 1000, // durasi animasi
+            once: true,     // animasi hanya diputar sekali saat di-scroll
+            offset: 100,    // elemen akan mulai animasi jika berjarak 100px dari bawah viewport
         });
     </script>
 </body>
