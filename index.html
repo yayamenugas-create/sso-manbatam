@@ -107,7 +107,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" data-aos="fade-down" data-aos-once="true">
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" data-aos="fade-down">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex-shrink-0 flex items-center gap-3">
@@ -922,9 +922,9 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000, // durasi animasi
-            once: true,     // animasi hanya diputar sekali saat di-scroll
-            offset: 100,    // elemen akan mulai animasi jika berjarak 100px dari bawah viewport
+            duration: 1000,
+            once: false,
+            offset: 100,
         });
     </script>
 </body>
